@@ -338,4 +338,10 @@ class TupleSpaceServer:
                 # Remove the key-value pair and return success response
                 value = self.tuple_space.pop(key)
                 return self.format_response(f"OK ({key}, {value}) removed")
+            # 键不存在，返回错误并更新错误统计
+            # Key doesn't exist, return error and update error statistics
+            else:
+                
+                self.stats['total_errors'] += 1
+                return self.format_response(f"ERR {key} does not exist")
 
