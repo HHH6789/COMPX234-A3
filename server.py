@@ -223,6 +223,12 @@ class TupleSpaceServer:
     # 定义处理客户端请求的方法
     # define method to process client requests
     def process_request(self, request):
+        # 解析请求
+        # Parse the request
+        try:
+            # 按空格分割请求
+            # Split the request by spaces
+            parts = request.split()
 
 
 
