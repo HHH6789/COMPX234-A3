@@ -139,5 +139,10 @@ class TupleSpaceServer:
             current_time = datetime.now()
 
 
+            # 检查是否达到报告间隔（10秒）
+            # Check if the reporting interval (10 seconds) has been reached
+            if current_time - self.last_report_time >= timedelta(seconds=10):
+
+
 
 
