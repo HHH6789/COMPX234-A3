@@ -300,6 +300,10 @@ class TupleSpaceServer:
         # 使用锁确保线程安全
         # Use lock to ensure thread safety
         with self.lock:
+            # 更新操作统计
+            # Update operation statistics
+            self.stats['total_operations'] += 1
+            self.stats['total_reads'] += 1
 
 
 
