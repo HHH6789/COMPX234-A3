@@ -161,6 +161,9 @@ def main():
         # Validate that the port number falls within the allowed range (50000-59999)
         # 验证端口号是否在允许范围内（50000-59999）
         if not (50000 <= port <= 59999):
+            # Raise an exception if port is out of range
+            # 如果端口超出范围则显示异常
+            raise ValueError("Port must be between 50000 and 59999")
 
 
                     
