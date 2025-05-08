@@ -21,3 +21,7 @@ class TupleSpaceServer:
         # 元组空间，用字典存储键值对
         # Tuple space, using a dictionary to store key-value pairs
         self.tuple_space = {}
+
+        # 线程锁，用于线程同步
+        # Thread lock for thread synchronization
+        self.lock = threading.Lock()
