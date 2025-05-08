@@ -67,3 +67,7 @@ class TupleSpaceServer:
         # 开始监听，最大连接数为5
         # Start listening with a maximum of 5 connections
         server_socket.listen(5)
+
+        # 打印服务器启动信息
+        # Print server startup information
+        print(f"Server started on port {self.port}")
