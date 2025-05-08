@@ -41,9 +41,14 @@ class TupleSpaceServer:
             # 总获取操作数
             # Total number of get operations
             'total_gets': 0,
-            # 总放置操作数 / Total number of put operations
+            # 总放置操作数
+            # Total number of put operations
             'total_puts': 0, 
             # 总错误数
             # Total number of errors
             'total_errors': 0,
         }
+
+        # 记录上次报告统计信息的时间
+        # Record the time of the last statistics report
+        self.last_report_time = datetime.now()
