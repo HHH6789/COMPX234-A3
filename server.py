@@ -420,3 +420,8 @@ def main():
     # Handle port number errors
     except ValueError as e:
         print(f"Error: {e}")
+    
+    # 处理其他异常
+    # Handle other exceptions
+    except Exception as e:
+        print(f"Server error: {e}")
