@@ -136,5 +136,10 @@ class TupleSpaceClient:
         except FileNotFoundError:
             print(f"Error: File not found - {self.request_file}")
 
+        # Handle connection refused error
+        # 处理连接被拒绝错误
+        except ConnectionRefusedError:
+            print("Error: Could not connect to the server")
+
 
                     
