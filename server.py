@@ -166,6 +166,21 @@ class TupleSpaceServer:
                 # Calculate the average tuple length
                 avg_tuple_size = (total_key_size + total_value_size) / num_tuples if num_tuples > 0 else 0
 
+                # 打印统计信息
+                # Print statistics
+                print("\n=== Server Statistics ===")
+                print(f"Tuples: {num_tuples}")
+                print(f"Avg tuple size: {avg_tuple_size:.2f} chars")
+                print(f"Avg key size: {avg_key_size:.2f} chars")
+                print(f"Avg value size: {avg_value_size:.2f} chars")
+                print(f"Total clients: {self.stats['total_clients']}")
+                print(f"Total operations: {self.stats['total_operations']}")
+                print(f"  READs: {self.stats['total_reads']}")
+                print(f"  GETs: {self.stats['total_gets']}")
+                print(f"  PUTs: {self.stats['total_puts']}")
+                print(f"  Errors: {self.stats['total_errors']}")
+                print("=======================\n")
+
 
 
 
