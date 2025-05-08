@@ -61,3 +61,11 @@ class TupleSpaceClient:
                         if collated_size > 970:
                             print(f"Error: collated size exceeds limit for line: {line}")
                             continue
+                    # Prepare the request message based on the operation
+                    # 根据操作类型准备请求消息
+                    #Check if the operation is 'READ'
+                    if operation == 'READ':
+                        # Set command to 'R' for READ operation
+                        cmd = 'R'
+                        # Format the message as "R <key>"
+                        message = f"{cmd} {key}"
