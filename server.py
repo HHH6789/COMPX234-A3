@@ -32,4 +32,7 @@ class TupleSpaceServer:
             # 总客户端数
             # Total number of clients
             'total_clients': 0,
+            # 总操作数
+            # Total number of operations
+            'total_operations': 0,
         }
