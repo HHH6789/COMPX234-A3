@@ -99,3 +99,8 @@ class TupleSpaceClient:
                         # Skip to next iteration of the loop
                         # 跳过本次循环，继续下一次
                         continue
+
+                    # Calculate the message length and format the request
+                    # 计算消息长度并格式化请求
+                    size = len(message) + 4  # 3 for size digits + 1 space
+                    request_msg = f"{size:03d} {message}"
