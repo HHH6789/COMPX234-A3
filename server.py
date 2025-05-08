@@ -292,6 +292,11 @@ class TupleSpaceServer:
         # Handle exceptions and return error message
         except Exception as e:
             return self.format_error(str(e))
+        
+
+    # 定义处理READ操作的方法
+    # define method to handle READ operations
+    def process_read(self, key):
 
 
 
