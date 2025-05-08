@@ -59,3 +59,7 @@ class TupleSpaceServer:
         # 创建TCP socket
         # Create a TCP socket
         server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+        # 绑定服务器地址和端口
+        # Bind the server address and port
+        server_socket.bind(('0.0.0.0', self.port))
