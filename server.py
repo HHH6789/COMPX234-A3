@@ -388,4 +388,13 @@ class TupleSpaceServer:
 # 主函数
 # Main function
 def main():
+    # 导入sys模块
+    # Import sys module
+    import sys
+    
+    # 检查命令行参数数量是否正确
+    # Check if the number of command line arguments is correct
+    if len(sys.argv) != 2:
+        print("Usage: python server.py <port>")
+        return
 
