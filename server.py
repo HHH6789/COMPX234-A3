@@ -97,7 +97,13 @@ class TupleSpaceServer:
                 # 创建并启动处理客户端请求的线程
                 # Create and start a thread to handle client requests
                 client_thread = threading.Thread(
-                    
+                    # Execute handle_cient method
+                    # 执行handle_client方法
+                    target=self.handle_client,
+                    #以client_socket作为参数
+                    #Using the parameter 'client-side socket'
+                    args=(client_socket,)
+
                 )
 
 
