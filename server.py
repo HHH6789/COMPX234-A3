@@ -38,4 +38,12 @@ class TupleSpaceServer:
             # 总读取操作数
             # Total number of read operations
             'total_reads': 0,
+            # 总获取操作数
+            # Total number of get operations
+            'total_gets': 0,
+            # 总放置操作数 / Total number of put operations
+            'total_puts': 0, 
+            # 总错误数
+            # Total number of errors
+            'total_errors': 0,
         }
