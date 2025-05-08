@@ -374,4 +374,8 @@ class TupleSpaceServer:
     # 定义格式化响应的方法
     # define method to format responses
     def format_response(self, message):
+        # 格式：NNN message（NNN是消息总长度）
+        # Format: NNN message (NNN is the total message length)
+        size = len(message) + 4  # 3 for size + 1 space
+        return f"{size:03d} {message}"
 
