@@ -104,11 +104,11 @@ class TupleSpaceServer:
                     #Using the parameter 'client-side socket'
                     args=(client_socket,)
 
-                    # Start the newly created thread
-                    # 启动新创建的线程
-                    client_thread.start()
-
                 )
+                # Start the newly created thread
+                # 启动新创建的线程
+                client_thread.start()
+                
 
 
 
