@@ -370,4 +370,8 @@ class TupleSpaceServer:
 
                 self.tuple_space[key] = value
                 return self.format_response(f"OK ({key}, {value}) added")
+            
+    # 定义格式化响应的方法
+    # define method to format responses
+    def format_response(self, message):
 
