@@ -121,6 +121,12 @@ class TupleSpaceServer:
     # 定义定期报告统计信息的方法
     # define method to periodically report statistics
     def report_stats_periodically(self):
+        #When the conditions are met
+        while True:
+            # 每10秒报告一次
+            # Report every 10 seconds
+            time.sleep(10)
+            self.report_stats()
                 
 
 
