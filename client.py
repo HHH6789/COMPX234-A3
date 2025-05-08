@@ -182,5 +182,10 @@ def main():
     client = TupleSpaceClient(host, port, request_file)
     client.run()
 
+# Entry point of the script
+# 脚本的入口点
+if __name__ == "__main__":
+    main()
+
 
                     
