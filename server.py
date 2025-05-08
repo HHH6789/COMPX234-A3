@@ -259,6 +259,34 @@ class TupleSpaceServer:
             expected_size = 3 + len(operation) + len(key) + (len(value) + 1 if value else 0)
             if expected_size != size:
                 return self.format_error("Size mismatch in request")
+            
+
+            # 根据操作类型处理请求
+            # Process the request based on the operation type
+            # Check if the operation is 'R' (Read)
+            # 检查操作是否为'R'（读取）
+            if operation == 'R':
+                # Call process_read method with the key and return its result
+                # 调用process_read方法处理key并返回结果
+                return self.process_read(key)
+            # If not 'R', check if operation is 'G' (Get)
+            # 如果不是'R'，检查操作是否为'G'（获取）
+            elif operation == 'G':
+                # Call process_get method with the key and return its result
+                # 调用process_get方法处理key并返回结果
+                return self.process_get(key)
+            # If not 'R' or 'G', check if operation is 'P' (Put)
+            # 如果不是'R'或'G'，检查操作是否为'P'（存放）
+            elif operation == 'P':
+                # Call process_put method with both key and value, return its result
+                # 调用process_put方法处理key和value并返回结果
+                return self.process_put(key, value)
+            # If operation is none of the above
+            # 如果操作不是以上任何一种
+            else:
+                # Return a formatted error message for invalid operation
+                # 返回格式化的错误信息表示无效操作
+                return self.format_error("Invalid operation")
 
 
 
