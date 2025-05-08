@@ -164,6 +164,14 @@ def main():
             # Raise an exception if port is out of range
             # 如果端口超出范围则显示异常
             raise ValueError("Port must be between 50000 and 59999")
+        
+        # Catch any ValueError that might occur
+        # 捕获可能发生的ValueError
+    except ValueError:
+        # Print user-friendly error message about valid port requirements
+        # 打印关于有效端口要求的用户友好错误信息
+        print("Error: Port must be a number between 50000 and 59999")
+        return
 
 
                     
