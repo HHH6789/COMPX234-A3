@@ -141,5 +141,9 @@ class TupleSpaceClient:
         except ConnectionRefusedError:
             print("Error: Could not connect to the server")
 
+# Main function to start the client
+# 主函数，启动客户端
+def main():
+
 
                     
