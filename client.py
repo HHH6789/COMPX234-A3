@@ -37,3 +37,7 @@ class TupleSpaceClient:
                     line = line.strip()
                     if not line:
                         continue
+                    
+                    # Parse the request line into parts
+                    # 将请求行分割成多个部分
+                    parts = line.split()
