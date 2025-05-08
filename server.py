@@ -189,6 +189,12 @@ class TupleSpaceServer:
     # 定义处理客户端连接的方法
     # define method to handle client connections
     def handle_client(self, client_socket):
+        try:
+            #When the conditions are met
+            while True:
+                # 接收客户端数据（最大1024字节）
+                # Receive client data (max 1024 bytes)
+                data = client_socket.recv(1024).decode('utf-8')
 
 
 
