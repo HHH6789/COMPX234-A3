@@ -144,6 +144,11 @@ class TupleSpaceClient:
 # Main function to start the client
 # 主函数，启动客户端
 def main():
+    # Check if the correct number of arguments is provided
+    # 检查是否提供了正确数量的参数
+    if len(sys.argv) != 4:
+        print("Usage: python client.py <host> <port> <request_file>")
+        return
 
 
                     
