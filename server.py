@@ -247,6 +247,13 @@ class TupleSpaceServer:
             # Get the key (for PUT operation, key is from part 2 to the second last part)
             key = ' '.join(parts[2:-1]) if operation == 'P' else ' '.join(parts[2:])
 
+            # 如果是PUT操作，获取值（最后一部分）
+            # If it's a PUT operation, get the value (last part)
+            if operation == 'P':
+                value = parts[-1]
+            else:
+                value = None
+
 
 
 
