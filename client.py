@@ -149,6 +149,10 @@ def main():
     if len(sys.argv) != 4:
         print("Usage: python client.py <host> <port> <request_file>")
         return
+    
+    # Get host from command line arguments
+    # 从命令行参数获取主机
+    host = sys.argv[1]
 
 
                     
