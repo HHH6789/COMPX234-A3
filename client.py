@@ -131,6 +131,10 @@ class TupleSpaceClient:
                     # 提取实际的响应消息内容
                     # 这是第一个空格后的所有内容
                     response_msg = response_parts[1]
+        # Handle file not found error
+        # 处理文件未找到错误
+        except FileNotFoundError:
+            print(f"Error: File not found - {self.request_file}")
 
 
                     
