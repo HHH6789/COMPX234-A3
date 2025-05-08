@@ -158,5 +158,9 @@ def main():
         # 将第二个命令行参数（端口号）从字符串转换为整数
         port = int(sys.argv[2])
 
+        # Validate that the port number falls within the allowed range (50000-59999)
+        # 验证端口号是否在允许范围内（50000-59999）
+        if not (50000 <= port <= 59999):
+
 
                     
