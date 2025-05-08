@@ -134,7 +134,9 @@ class TupleSpaceServer:
         # 使用锁确保线程安全
         # Use lock to ensure thread safety
         with self.lock:
-                
+            # 获取当前时间
+            # Get current time
+            current_time = datetime.now()
 
 
 
