@@ -1,5 +1,5 @@
 # 导入socket,threading,time模块
-# Import the socket module for network communication
+#Import the socket,threading,time module.
 import socket
 import threading
 import time
@@ -7,3 +7,7 @@ import time
 from collections import defaultdict
 # Import datetime and timedelta from datetime for date and time calculations
 from datetime import datetime, timedelta
+
+# 定义TupleSpaceServer类
+# Define the TupleSpaceServer class.
+class TupleSpaceServer:
