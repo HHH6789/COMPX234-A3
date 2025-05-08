@@ -344,4 +344,11 @@ class TupleSpaceServer:
                 
                 self.stats['total_errors'] += 1
                 return self.format_response(f"ERR {key} does not exist")
+            
+    # 定义处理PUT操作的方法
+    # define method to handle PUT operations
+    def process_put(self, key, value):
+        # 使用锁确保线程安全
+        # Use lock to ensure thread safety
+        with self.lock:
 
