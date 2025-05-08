@@ -218,6 +218,11 @@ class TupleSpaceServer:
             # 关闭客户端socket
             # Close the client socket
             client_socket.close()
+    
+
+    # 定义处理客户端请求的方法
+    # define method to process client requests
+    def process_request(self, request):
 
 
 
