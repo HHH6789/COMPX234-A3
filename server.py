@@ -86,6 +86,10 @@ class TupleSpaceServer:
                 # Accept a client connection
                 client_socket, addr = server_socket.accept()
 
+                # 客户端数加1
+                # Increment the client count
+                self.stats['total_clients'] += 1
+
 
 
 
