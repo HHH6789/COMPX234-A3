@@ -35,3 +35,5 @@ class TupleSpaceClient:
                 # 处理文件中的每个请求行
                 for line in requests:
                     line = line.strip()
+                    if not line:
+                        continue
