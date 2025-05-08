@@ -308,6 +308,10 @@ class TupleSpaceServer:
             # 检查键是否存在
             # Check if the key exists
             if key in self.tuple_space:
+                # 获取值并返回成功响应
+                # Get the value and return success response
+                value = self.tuple_space[key]
+                return self.format_response(f"OK ({key}, {value}) read")
 
 
 
