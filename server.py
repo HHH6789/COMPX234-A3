@@ -201,6 +201,10 @@ class TupleSpaceServer:
                 if not data:
                     break
 
+                # 处理请求并获取响应
+                # Process the request and get the response
+                response = self.process_request(data)
+
 
 
 
