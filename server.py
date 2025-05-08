@@ -14,3 +14,6 @@ class TupleSpaceServer:
     # 初始化方法
     # Initialization method, sets the server port and initializes data structures
     def __init__(self, port):
+        # 服务器端口号
+        # Server port number
+        self.port = port
