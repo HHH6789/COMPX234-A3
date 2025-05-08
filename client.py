@@ -69,3 +69,13 @@ class TupleSpaceClient:
                         cmd = 'R'
                         # Format the message as "R <key>"
                         message = f"{cmd} {key}"
+                    
+                    # If operation is not 'READ', check if it's 'GET'
+                    # 如果操作不是'READ'，检查是否是'GET'
+                    elif operation == 'GET':
+                        # Set command to 'G' for GET operation
+                        # 为GET操作设置命令为'G'
+                        cmd = 'G'
+                        # Format the message as "G <key>"
+                        # 将消息格式化为"G <key>"
+                        message = f"{cmd} {key}"
