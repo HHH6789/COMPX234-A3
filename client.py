@@ -177,5 +177,10 @@ def main():
     # 从命令行参数获取请求文件
     request_file = sys.argv[3]
 
+    # Create and run the client
+    # 创建并运行客户端
+    client = TupleSpaceClient(host, port, request_file)
+    client.run()
+
 
                     
