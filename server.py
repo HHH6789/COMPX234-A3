@@ -90,6 +90,10 @@ class TupleSpaceServer:
                 # Increment the client count
                 self.stats['total_clients'] += 1
 
+                # 打印新客户端连接信息
+                # Print new client connection information
+                print(f"New client connected: {addr}")
+
 
 
 
