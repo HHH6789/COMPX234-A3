@@ -81,7 +81,11 @@ class TupleSpaceServer:
         # 主循环，接受客户端连接
         # Main loop to accept client connections
         try:
-            
+            while True:
+                # 接受客户端连接
+                # Accept a client connection
+                client_socket, addr = server_socket.accept()
+
 
 
 
