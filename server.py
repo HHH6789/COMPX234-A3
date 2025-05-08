@@ -243,6 +243,10 @@ class TupleSpaceServer:
             # Get the operation type and convert to uppercase
             operation = parts[1].upper()
 
+            # 获取键（对于PUT操作，键是第2部分到倒数第二部分）
+            # Get the key (for PUT operation, key is from part 2 to the second last part)
+            key = ' '.join(parts[2:-1]) if operation == 'P' else ' '.join(parts[2:])
+
 
 
 
