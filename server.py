@@ -63,3 +63,7 @@ class TupleSpaceServer:
         # 绑定服务器地址和端口
         # Bind the server address and port
         server_socket.bind(('0.0.0.0', self.port))
+
+        # 开始监听，最大连接数为5
+        # Start listening with a maximum of 5 connections
+        server_socket.listen(5)
