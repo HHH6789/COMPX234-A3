@@ -108,3 +108,7 @@ class TupleSpaceClient:
                     # Send the request to the server
                     # 向服务器发送请求
                     sock.sendall(request_msg.encode('utf-8'))
+
+                    # Receive the response from the server
+                    # 接收服务器的响应
+                    response = sock.recv(1024).decode('utf-8').strip()
