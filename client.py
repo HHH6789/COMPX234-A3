@@ -123,5 +123,9 @@ class TupleSpaceClient:
                     if len(response_parts) < 2:
                         print(f"Invalid response format: {response}")
                         continue
+                    # Extract the response size (should be 3-digit number)
+                    # 提取响应大小（应该是3位数字）
+                    response_msg = response_parts[1]
+
 
                     
