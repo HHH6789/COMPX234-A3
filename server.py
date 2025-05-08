@@ -397,4 +397,17 @@ def main():
     if len(sys.argv) != 2:
         print("Usage: python server.py <port>")
         return
+    
+    # 获取端口号并验证范围
+    # Get the port number and validate the range
+    try:
+        # Convert the first command-line argument (port number) from string to integer
+        # 将第一个命令行参数(端口号)从字符串转换为整数
+        port = int(sys.argv[1])
+        # Validate that the port number is within the allowed range (50000-59999)
+        # 验证端口号是否在允许范围内(50000-59999)
+        if not (50000 <= port <= 59999):
+            # Raise a ValueError with descriptive message if port is out of range
+            # 如果端口号超出范围，抛出带有描述信息的ValueError异常
+            raise ValueError("Port must be between 50000 and 59999")
 
