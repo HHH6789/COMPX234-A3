@@ -89,3 +89,13 @@ class TupleSpaceClient:
                         # Format the message as "P <key> <value>"
                         # 将消息格式化为"P <key> <value>"
                         message = f"{cmd} {key} {value}"
+
+                    # If operation is none of the above
+                    # 如果操作不是以上任何一种
+                    else:
+                        # Print error message for invalid operation
+                        # 打印无效操作的错误信息
+                        print(f"Invalid operation: {operation}")
+                        # Skip to next iteration of the loop
+                        # 跳过本次循环，继续下一次
+                        continue
