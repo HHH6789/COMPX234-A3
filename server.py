@@ -29,5 +29,7 @@ class TupleSpaceServer:
         # 统计信息字典，记录服务器运行状态
         # Statistics dictionary to record server operation status
         self.stats = {
-            
+            # 总客户端数
+            # Total number of clients
+            'total_clients': 0,
         }
