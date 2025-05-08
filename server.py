@@ -71,3 +71,12 @@ class TupleSpaceServer:
         # 打印服务器启动信息
         # Print server startup information
         print(f"Server started on port {self.port}")
+
+        # 创建并启动统计信息报告线程
+        # Create and start the statistics reporting thread
+        stats_thread = threading.Thread(target=self.report_stats_periodically, daemon=True)
+        stats_thread.start()
+
+
+
+        
