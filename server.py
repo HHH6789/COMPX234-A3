@@ -35,4 +35,7 @@ class TupleSpaceServer:
             # 总操作数
             # Total number of operations
             'total_operations': 0,
+            # 总读取操作数
+            # Total number of read operations
+            'total_reads': 0,
         }
