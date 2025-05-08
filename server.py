@@ -158,6 +158,10 @@ class TupleSpaceServer:
                 # Calculate the average key length
                 avg_key_size = total_key_size / num_tuples if num_tuples > 0 else 0
 
+                # 计算平均值长度
+                # Calculate the average value length
+                avg_value_size = total_value_size / num_tuples if num_tuples > 0 else 0
+
 
 
 
