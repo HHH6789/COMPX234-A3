@@ -331,3 +331,7 @@ class TupleSpaceServer:
             self.stats['total_operations'] += 1
             self.stats['total_gets'] += 1
 
+            # 检查键是否存在
+            # Check if the key exists
+            if key in self.tuple_space:
+
