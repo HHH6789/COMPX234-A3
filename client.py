@@ -3,6 +3,11 @@
 import socket  
 import sys  
 
+#create class TupleSpaceClient 
+# 创建TupleSpaceClient类
+class TupleSpaceClient:
+    def __init__(self, host, port, request_file):
+
 
     
 
