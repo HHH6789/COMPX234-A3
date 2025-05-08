@@ -150,6 +150,10 @@ class TupleSpaceServer:
                 # Calculate the total length of all keys
                 total_key_size = sum(len(k) for k in self.tuple_space.keys())
 
+                # 计算所有值的总长度
+                # Calculate the total length of all values
+                total_value_size = sum(len(v) for v in self.tuple_space.values())
+
 
 
 
