@@ -44,3 +44,12 @@ class TupleSpaceClient:
                     if len(parts) < 2:
                         print(f"Invalid request line: {line}")
                         continue
+
+                    # Extract operation, key, and value from the request line
+                    # 从请求行中提取操作、键和值
+                    #operation
+                    operation = parts[0].upper()
+                    #key
+                    key = ' '.join(parts[1:-1]) if operation == 'PUT' else ' '.join(parts[1:])
+                    #value
+                    value = parts[-1] if operation == 'PUT' else None
