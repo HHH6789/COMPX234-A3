@@ -30,3 +30,8 @@ class TupleSpaceClient:
             # 创建TCP套接字并连接到服务器
             with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
                 sock.connect((self.host, self.port))
+
+                # Process each request line in the file
+                # 处理文件中的每个请求行
+                for line in requests:
+                    line = line.strip()
