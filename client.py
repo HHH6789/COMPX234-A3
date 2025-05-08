@@ -125,6 +125,11 @@ class TupleSpaceClient:
                         continue
                     # Extract the response size (should be 3-digit number)
                     # 提取响应大小（应该是3位数字）
+                    response_size = response_parts[0]
+                    # Extract the actual response message content
+                    # This is everything after the first space
+                    # 提取实际的响应消息内容
+                    # 这是第一个空格后的所有内容
                     response_msg = response_parts[1]
 
 
