@@ -425,3 +425,9 @@ def main():
     # Handle other exceptions
     except Exception as e:
         print(f"Server error: {e}")
+
+
+# 程序入口
+# Program entry point
+if __name__ == "__main__":
+    main()
