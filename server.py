@@ -410,4 +410,9 @@ def main():
             # Raise a ValueError with descriptive message if port is out of range
             # 如果端口号超出范围，抛出带有描述信息的ValueError异常
             raise ValueError("Port must be between 50000 and 59999")
+        
+        # 创建服务器实例并启动
+        # Create server instance and start it
+        server = TupleSpaceServer(port)
+        server.start()
 
