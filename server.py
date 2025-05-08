@@ -320,5 +320,10 @@ class TupleSpaceServer:
                 return self.format_response(f"ERR {key} does not exist")
 
 
-
+    # 定义处理GET操作的方法
+    # define method to handle GET operations
+    def process_get(self, key):
+        # 使用锁确保线程安全
+        # Use lock to ensure thread safety
+        with self.lock:
 
