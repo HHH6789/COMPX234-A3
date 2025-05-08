@@ -7,6 +7,15 @@ import sys
 # 创建TupleSpaceClient类
 class TupleSpaceClient:
     def __init__(self, host, port, request_file):
+        # Initialize the client
+        # 初始化客户端
+        # 服务器主机地址,设置主机、端口和请求文件
+        # Server host address
+        self.host = host  
+        self.port = port 
+        # 请求文件名
+        # Request file name
+        self.request_file = request_file 
 
 
     
