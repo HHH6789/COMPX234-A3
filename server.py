@@ -378,4 +378,9 @@ class TupleSpaceServer:
         # Format: NNN message (NNN is the total message length)
         size = len(message) + 4  # 3 for size + 1 space
         return f"{size:03d} {message}"
+    
+    # 格式化错误信息的方法
+    # Method to format error messages
+    def format_error(self, error_msg):
+        return self.format_response(f"ERR {error_msg}")
 
