@@ -415,4 +415,8 @@ def main():
         # Create server instance and start it
         server = TupleSpaceServer(port)
         server.start()
-
+    
+    # 处理端口号错误
+    # Handle port number errors
+    except ValueError as e:
+        print(f"Error: {e}")
