@@ -25,3 +25,8 @@ class TupleSpaceClient:
             # 打开并读取请求文件
             with open(self.request_file, 'r') as file:
                 requests = file.readlines()
+
+            # Create a TCP socket and connect to the server
+            # 创建TCP套接字并连接到服务器
+            with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
+                sock.connect((self.host, self.port))
