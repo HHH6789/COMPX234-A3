@@ -108,6 +108,11 @@ class TupleSpaceServer:
                 # Start the newly created thread
                 # 启动新创建的线程
                 client_thread.start()
+        
+        # 键盘中断，关闭服务器
+        # Catch keyboard interrupt to shut down the server
+        except KeyboardInterrupt: 
+            print("\nServer shutting down...")
                 
 
 
