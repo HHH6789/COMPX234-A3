@@ -131,6 +131,9 @@ class TupleSpaceServer:
     # 定义方法来使报告统计信息的具体实现
     # Defining methods to achieve specific implementation of statistical information in reports
     def report_stats(self):
+        # 使用锁确保线程安全
+        # Use lock to ensure thread safety
+        with self.lock:
                 
 
 
