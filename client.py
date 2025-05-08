@@ -79,3 +79,13 @@ class TupleSpaceClient:
                         # Format the message as "G <key>"
                         # 将消息格式化为"G <key>"
                         message = f"{cmd} {key}"
+                    
+                    # If operation is not 'READ' or 'GET', check if it's 'PUT'
+                    # 如果操作不是'READ'或'GET'，检查是否是'PUT'
+                    elif operation == 'PUT':
+                        # Set command to 'P' for PUT operation
+                        # 为PUT操作设置命令为'P'
+                        cmd = 'P'
+                        # Format the message as "P <key> <value>"
+                        # 将消息格式化为"P <key> <value>"
+                        message = f"{cmd} {key} {value}"
