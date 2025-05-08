@@ -172,6 +172,10 @@ def main():
         # 打印关于有效端口要求的用户友好错误信息
         print("Error: Port must be a number between 50000 and 59999")
         return
+    
+    # Get the request file from command line arguments
+    # 从命令行参数获取请求文件
+    request_file = sys.argv[3]
 
 
                     
