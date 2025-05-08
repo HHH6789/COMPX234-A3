@@ -239,6 +239,10 @@ class TupleSpaceServer:
             # Get the request size
             size = int(parts[0])
 
+            # 获取操作类型并转换为大写
+            # Get the operation type and convert to uppercase
+            operation = parts[1].upper()
+
 
 
 
