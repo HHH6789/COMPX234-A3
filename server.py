@@ -25,3 +25,9 @@ class TupleSpaceServer:
         # 线程锁，用于线程同步
         # Thread lock for thread synchronization
         self.lock = threading.Lock()
+
+        # 统计信息字典，记录服务器运行状态
+        # Statistics dictionary to record server operation status
+        self.stats = {
+            
+        }
