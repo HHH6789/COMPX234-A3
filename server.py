@@ -205,6 +205,10 @@ class TupleSpaceServer:
                 # Process the request and get the response
                 response = self.process_request(data)
 
+                # 发送响应给客户端
+                # Send the response to the client
+                client_socket.send(response.encode('utf-8'))
+
 
 
 
