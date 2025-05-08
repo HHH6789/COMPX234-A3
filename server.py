@@ -383,4 +383,9 @@ class TupleSpaceServer:
     # Method to format error messages
     def format_error(self, error_msg):
         return self.format_response(f"ERR {error_msg}")
+    
+
+# 主函数
+# Main function
+def main():
 
