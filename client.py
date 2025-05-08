@@ -112,3 +112,9 @@ class TupleSpaceClient:
                     # Receive the response from the server
                     # 接收服务器的响应
                     response = sock.recv(1024).decode('utf-8').strip()
+
+                    # Parse the response into size and message
+                    # 将响应解析为大小和消息
+                    response_parts = response.split(' ', 1)
+
+                    
