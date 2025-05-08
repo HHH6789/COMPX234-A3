@@ -116,5 +116,12 @@ class TupleSpaceClient:
                     # Parse the response into size and message
                     # 将响应解析为大小和消息
                     response_parts = response.split(' ', 1)
+                    # Validate that the response contains both size and message parts
+                    # If not, print error and skip to next request
+                    # 验证响应是否包含大小和消息两部分
+                    #如果不包含，打印错误并跳过处理下一个请求
+                    if len(response_parts) < 2:
+                        print(f"Invalid response format: {response}")
+                        continue
 
                     
