@@ -214,6 +214,10 @@ class TupleSpaceServer:
         # Handle client exceptions
         except ConnectionResetError:
             print("Client disconnected unexpectedly")
+        finally:
+            # 关闭客户端socket
+            # Close the client socket
+            client_socket.close()
 
 
 
