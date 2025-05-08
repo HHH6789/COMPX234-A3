@@ -208,6 +208,12 @@ class TupleSpaceServer:
                 # 发送响应给客户端
                 # Send the response to the client
                 client_socket.send(response.encode('utf-8'))
+        
+        
+        # 处理客户端异常
+        # Handle client exceptions
+        except ConnectionResetError:
+            print("Client disconnected unexpectedly")
 
 
 
