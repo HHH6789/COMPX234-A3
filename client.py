@@ -41,3 +41,6 @@ class TupleSpaceClient:
                     # Parse the request line into parts
                     # 将请求行分割成多个部分
                     parts = line.split()
+                    if len(parts) < 2:
+                        print(f"Invalid request line: {line}")
+                        continue
