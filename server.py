@@ -17,3 +17,7 @@ class TupleSpaceServer:
         # 服务器端口号
         # Server port number
         self.port = port
+
+        # 元组空间，用字典存储键值对
+        # Tuple space, using a dictionary to store key-value pairs
+        self.tuple_space = {}
