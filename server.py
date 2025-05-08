@@ -52,3 +52,7 @@ class TupleSpaceServer:
         # 记录上次报告统计信息的时间
         # Record the time of the last statistics report
         self.last_report_time = datetime.now()
+    
+    # 启动服务器
+    # start the server
+    def start(self):
