@@ -104,3 +104,7 @@ class TupleSpaceClient:
                     # 计算消息长度并格式化请求
                     size = len(message) + 4  # 3 for size digits + 1 space
                     request_msg = f"{size:03d} {message}"
+
+                    # Send the request to the server
+                    # 向服务器发送请求
+                    sock.sendall(request_msg.encode('utf-8'))
