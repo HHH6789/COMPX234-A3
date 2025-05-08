@@ -196,6 +196,11 @@ class TupleSpaceServer:
                 # Receive client data (max 1024 bytes)
                 data = client_socket.recv(1024).decode('utf-8')
 
+                # 如果没有数据，断开连接
+                # If no data, disconnect
+                if not data:
+                    break
+
 
 
 
