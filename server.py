@@ -253,6 +253,12 @@ class TupleSpaceServer:
                 value = parts[-1]
             else:
                 value = None
+            
+            # 验证请求大小是否匹配
+            # Validate if the request size matches
+            expected_size = 3 + len(operation) + len(key) + (len(value) + 1 if value else 0)
+            if expected_size != size:
+                return self.format_error("Size mismatch in request")
 
 
 
