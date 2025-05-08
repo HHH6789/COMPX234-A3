@@ -234,6 +234,10 @@ class TupleSpaceServer:
             # Check if the request format is valid (at least 3 parts)
             if len(parts) < 3:
                 return self.format_error("Invalid request format")
+            
+            # 获取请求大小
+            # Get the request size
+            size = int(parts[0])
 
 
 
