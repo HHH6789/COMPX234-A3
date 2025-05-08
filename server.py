@@ -11,3 +11,6 @@ from datetime import datetime, timedelta
 # 定义TupleSpaceServer类
 # Define the TupleSpaceServer class.
 class TupleSpaceServer:
+    # 初始化方法
+    # Initialization method, sets the server port and initializes data structures
+    def __init__(self, port):
