@@ -181,6 +181,10 @@ class TupleSpaceServer:
                 print(f"  Errors: {self.stats['total_errors']}")
                 print("=======================\n")
 
+                # 更新上次报告时间
+                # Update the last report time
+                self.last_report_time = current_time
+
 
 
 
