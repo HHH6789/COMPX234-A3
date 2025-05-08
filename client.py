@@ -16,7 +16,7 @@ class TupleSpaceClient:
         # 请求文件名
         # Request file name
         self.request_file = request_file 
-
-
     
-
+    # Main method to run the client
+    # 运行客户端的主要方法
+    def run(self):
