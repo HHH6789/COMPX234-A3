@@ -297,6 +297,9 @@ class TupleSpaceServer:
     # 定义处理READ操作的方法
     # define method to handle READ operations
     def process_read(self, key):
+        # 使用锁确保线程安全
+        # Use lock to ensure thread safety
+        with self.lock:
 
 
 
