@@ -127,6 +127,10 @@ class TupleSpaceServer:
             # Report every 10 seconds
             time.sleep(10)
             self.report_stats()
+
+    # 定义方法来使报告统计信息的具体实现
+    # Defining methods to achieve specific implementation of statistical information in reports
+    def report_stats(self):
                 
 
 
