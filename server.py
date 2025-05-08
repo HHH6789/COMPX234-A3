@@ -287,6 +287,11 @@ class TupleSpaceServer:
                 # Return a formatted error message for invalid operation
                 # 返回格式化的错误信息表示无效操作
                 return self.format_error("Invalid operation")
+        
+        # 处理异常并返回错误信息
+        # Handle exceptions and return error message
+        except Exception as e:
+            return self.format_error(str(e))
 
 
 
