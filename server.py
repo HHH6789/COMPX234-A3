@@ -56,3 +56,6 @@ class TupleSpaceServer:
     # 启动服务器
     # start the server
     def start(self):
+        # 创建TCP socket
+        # Create a TCP socket
+        server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
