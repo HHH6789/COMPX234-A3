@@ -186,5 +186,10 @@ class TupleSpaceServer:
                 self.last_report_time = current_time
 
 
+    # 定义处理客户端连接的方法
+    # define method to handle client connections
+    def handle_client(self, client_socket):
+
+
 
 
