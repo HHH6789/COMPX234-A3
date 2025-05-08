@@ -154,6 +154,10 @@ class TupleSpaceServer:
                 # Calculate the total length of all values
                 total_value_size = sum(len(v) for v in self.tuple_space.values())
 
+                # 计算平均键长度
+                # Calculate the average key length
+                avg_key_size = total_key_size / num_tuples if num_tuples > 0 else 0
+
 
 
 
