@@ -102,8 +102,11 @@ class TupleSpaceClient:
 
                     # Calculate the message length and format the request
                     # 计算消息长度并格式化请求
-                    size = len(message) + 4  # 3 for size digits + 1 space
-                    request_msg = f"{size:03d} {message}"
+                    message_length = 3 + 1 + len(message_content) 
+                    if message_length > 999:
+                        print(f"Error: message too long for line: {line}")
+                        continue
+                    request_msg = f"{message_length:03d} {message_content}"
 
                     # Send the request to the server
                     # 向服务器发送请求

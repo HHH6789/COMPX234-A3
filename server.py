@@ -232,33 +232,49 @@ class TupleSpaceServer:
 
             # 检查请求格式是否有效（至少3部分）
             # Check if the request format is valid (at least 3 parts)
-            if len(parts) < 3:
-                return self.format_error("Invalid request format")
+            if len(parts) < 5:
+                return self.format_error("Message too short")
             
-            # 获取请求大小
-            # Get the request size
-            size = int(parts[0])
+            # === 修正：提取长度前缀 ===
+            # === Fix: Extract length prefix ===
+            # Extract the first 3 characters of the request as the declared length string
+            # 提取请求的前3个字符作为声明的长度字符串
+            declared_length_str = request[:3]
+            # Try to convert the length string to an integer
+            # 尝试将长度字符串转换为整数
+            try:
+               # Convert the declared length string to integer
+                # 将声明的长度字符串转换为整数
+               declared_length = int(declared_length_str)
+            # Catch ValueError if the conversion fails (non-numeric characters)
+            # 捕获转换失败时的ValueError(非数字字符)
+            except ValueError:
+                return self.format_error("Invalid length prefix")
 
-            # 获取操作类型并转换为大写
-            # Get the operation type and convert to uppercase
-            operation = parts[1].upper()
+            # 验证声明的长度是否匹配实际长度
+            actual_length = len(request)
+            if actual_length != declared_length:
+                return self.format_error(
+                    f"Size mismatch (declared: {declared_length}, actual: {actual_length})"
+                )
 
-            # 获取键（对于PUT操作，键是第2部分到倒数第二部分）
-            # Get the key (for PUT operation, key is from part 2 to the second last part)
-            key = ' '.join(parts[2:-1]) if operation == 'P' else ' '.join(parts[2:])
-
-            # 如果是PUT操作，获取值（最后一部分）
-            # If it's a PUT operation, get the value (last part)
-            if operation == 'P':
-                value = parts[-1]
-            else:
-                value = None
-            
-            # 验证请求大小是否匹配
-            # Validate if the request size matches
-            expected_size = 3 + len(operation) + len(key) + (len(value) + 1 if value else 0)
-            if expected_size != size:
-                return self.format_error("Size mismatch in request")
+            # === 修正：提取操作和参数 ===
+            remaining_msg = request[4:]  # 跳过NNN和空格
+            parts = remaining_msg.split(maxsplit=2)  # 最多分割2次（兼容含空格的value）
+        
+            # Check if the request has less than 2 parts and the operation is not 'P' (Put)
+            # 检查请求是否少于2部分且操作不是'P'(存放)
+            if len(parts) < 2 and parts[0] != 'P':
+                return self.format_error("Missing key")
+            # Get the operation type and convert to uppercase for case-insensitive comparison
+            # 获取操作类型并转换为大写以便不区分大小写比较
+            operation = parts[0].upper()
+            # Extract the key which is always the second element in parts
+            # 提取key(永远是parts中的第二个元素)
+            key = parts[1]
+            # For Put operations, extract value if present (third element), otherwise set to None
+            # 对于存放操作，如果有值(第三个元素)则提取，否则设为None
+            value = parts[2] if len(parts) > 2 and operation == 'P' else None
             
 
             # 根据操作类型处理请求
