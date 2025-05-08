@@ -356,3 +356,18 @@ class TupleSpaceServer:
             self.stats['total_operations'] += 1
             self.stats['total_puts'] += 1
 
+            # 检查键是否已存在
+            # Check if the key already exists
+            if key in self.tuple_space:
+                # 键已存在，返回错误并更新错误统计
+                # Key already exists, return error and update error statistics
+                self.stats['total_errors'] += 1
+                return self.format_response(f"ERR {key} already exists")
+            
+            # 添加键值对并返回成功响应
+            # Add the key-value pair and return success response 
+            else:
+
+                self.tuple_space[key] = value
+                return self.format_response(f"OK ({key}, {value}) added")
+
