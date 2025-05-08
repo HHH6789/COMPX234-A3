@@ -117,6 +117,10 @@ class TupleSpaceServer:
         # Close the server socket
         finally: 
             server_socket.close()
+    
+    # 定义定期报告统计信息的方法
+    # define method to periodically report statistics
+    def report_stats_periodically(self):
                 
 
 
