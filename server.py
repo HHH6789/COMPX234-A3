@@ -113,6 +113,10 @@ class TupleSpaceServer:
         # Catch keyboard interrupt to shut down the server
         except KeyboardInterrupt: 
             print("\nServer shutting down...")
+        # 关闭服务器socket
+        # Close the server socket
+        finally: 
+            server_socket.close()
                 
 
 
