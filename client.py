@@ -58,3 +58,6 @@ class TupleSpaceClient:
                     # 验证PUT操作的合并大小
                     if operation == 'PUT':
                         collated_size = len(key) + len(value) + 1  # +1 for space
+                        if collated_size > 970:
+                            print(f"Error: collated size exceeds limit for line: {line}")
+                            continue
