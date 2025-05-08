@@ -20,3 +20,8 @@ class TupleSpaceClient:
     # Main method to run the client
     # 运行客户端的主要方法
     def run(self):
+        try:
+            # Open and read the request file
+            # 打开并读取请求文件
+            with open(self.request_file, 'r') as file:
+                requests = file.readlines()
