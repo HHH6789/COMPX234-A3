@@ -142,6 +142,9 @@ class TupleSpaceServer:
             # 检查是否达到报告间隔（10秒）
             # Check if the reporting interval (10 seconds) has been reached
             if current_time - self.last_report_time >= timedelta(seconds=10):
+                # 计算元组数量
+                # Calculate the number of tuples
+                num_tuples = len(self.tuple_space)
 
 
 
