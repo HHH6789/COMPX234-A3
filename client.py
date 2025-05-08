@@ -53,3 +53,8 @@ class TupleSpaceClient:
                     key = ' '.join(parts[1:-1]) if operation == 'PUT' else ' '.join(parts[1:])
                     #value
                     value = parts[-1] if operation == 'PUT' else None
+
+                    # Validate the collated size for PUT operations
+                    # 验证PUT操作的合并大小
+                    if operation == 'PUT':
+                        collated_size = len(key) + len(value) + 1  # +1 for space
