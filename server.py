@@ -252,15 +252,16 @@ class TupleSpaceServer:
                 return self.format_error("Invalid length prefix")
 
             # 验证声明的长度是否匹配实际长度
+            # Verify if the declared length matches the actual length
             actual_length = len(request)
             if actual_length != declared_length:
                 return self.format_error(
                     f"Size mismatch (declared: {declared_length}, actual: {actual_length})"
                 )
 
-            # === 修正：提取操作和参数 ===
-            remaining_msg = request[4:]  # 跳过NNN和空格
-            parts = remaining_msg.split(maxsplit=2)  # 最多分割2次（兼容含空格的value）
+            #修正：提取操作和参数Correction: Extract operations and parameters
+            remaining_msg = request[4:]  # 跳过NNN和空格Skip NNN and spaces
+            parts = remaining_msg.split(maxsplit=2)  
         
             # Check if the request has less than 2 parts and the operation is not 'P' (Put)
             # 检查请求是否少于2部分且操作不是'P'(存放)
