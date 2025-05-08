@@ -153,6 +153,10 @@ def main():
     # Get host from command line arguments
     # 从命令行参数获取主机
     host = sys.argv[1]
+    try:
+        # Convert the second command-line argument (port number) from string to integer
+        # 将第二个命令行参数（端口号）从字符串转换为整数
+        port = int(sys.argv[2])
 
 
                     
