@@ -230,6 +230,11 @@ class TupleSpaceServer:
             # Split the request by spaces
             parts = request.split()
 
+            # 检查请求格式是否有效（至少3部分）
+            # Check if the request format is valid (at least 3 parts)
+            if len(parts) < 3:
+                return self.format_error("Invalid request format")
+
 
 
 
