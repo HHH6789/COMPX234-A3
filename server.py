@@ -334,4 +334,8 @@ class TupleSpaceServer:
             # 检查键是否存在
             # Check if the key exists
             if key in self.tuple_space:
+                # 移除键值对并返回成功响应
+                # Remove the key-value pair and return success response
+                value = self.tuple_space.pop(key)
+                return self.format_response(f"OK ({key}, {value}) removed")
 
